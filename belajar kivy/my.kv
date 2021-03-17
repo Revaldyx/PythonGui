@@ -1,22 +1,26 @@
-#:kivy 1.11
-
+#:kivy 1.0
 <MyGrid>:
     GridLayout:
-        cols: 2
-        rows: 2
-        padding: 10
-        spacing: 10
-        Label:
-            text:"Nama : "
+        cols:1
+        size: root.width, root.height
+    
+        GridLayout:
+            cols:2
 
-        TextInput:
-            multiline:False
+            Label:
+                text: "Name: "
+                color: 1,1,0,1
+                font_size: 24
 
-        Label:
-            text:"NPM : "
+            TextInput:
+                multiline:False
 
-        TextInput:
-            multiline:False
+            Label:
+                text: "Email: "
 
-        # Button:
-        #     text:"Simpan"
+            TextInput:
+                multiline:False
+
+        Button:
+            text:"Submit"
+            on_press: app.btn()
