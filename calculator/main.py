@@ -16,8 +16,8 @@ class CalcGridLayout(GridLayout):
     def calculate(self, calculation):
         if calculation:
             try:
-                # fungsi eval() berfungsi untuk memparsing (menguraikan) string ekspresi yang dilewatkan ke dalamnya, 
-				# dan menjalankannya sebagai ekspresi Python murni.
+                # fungsi eval() berfungsi untuk memparsing (menguraikan) string ekspresi yang dilewatkan ke dalamnya,
+                # dan menjalankannya sebagai ekspresi Python murni.
                 self.display.text = str(eval(calculation))
             except Exception:
                 self.display.text = "Error"
@@ -27,6 +27,8 @@ class CalculatorApp(App):
 
     def build(self):
         return CalcGridLayout()
-		
-calcApp = CalculatorApp()
-calcApp.run()
+
+
+if __name__ == "__main__":
+	calcApp = CalculatorApp()
+	calcApp.run()
