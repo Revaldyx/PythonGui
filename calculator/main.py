@@ -12,7 +12,6 @@ Config.set('graphics', 'height', '400')
 
 
 class CalcGridLayout(GridLayout):
-
     def calculate(self, calculation):
         if calculation:
             try:
